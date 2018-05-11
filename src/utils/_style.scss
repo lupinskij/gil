@@ -1,0 +1,63 @@
+// Custom Styles for Emma
+// Using our variables
+
+@import "../../config/_variables.scss";
+
+::selection {
+  background-color: #EDB244;
+  color: #fff;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+
+  &--wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &--content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+  }
+
+  &--navigation {
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+}
+
+.home-intro {
+  background: linear-gradient(90deg,$grey 0,$grey 50%,$black 0,$black);
+  margin-top: 100px;
+  position: relative;
+
+  .container--content {
+    background-color: $grey;
+  }
+}
+
+.text-intro {
+  font-size: 85px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.home-intro-video {
+  margin-top: -150px;
+}
+
+.blurb-intro {
+  width: 40%;
+}

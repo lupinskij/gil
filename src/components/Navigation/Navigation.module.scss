@@ -1,0 +1,86 @@
+@import "../../../config/_variables.scss";
+
+.socialMedia > span {
+	margin-left: auto;
+}
+
+.name {
+	float: left;
+
+	h1 {
+		color: #fff;
+		font-family: 'soleil', serif;
+		font-size: 19px !important;
+		margin-bottom: 0 !important;
+	}
+
+	span {
+		color: #555A5A;
+		position: relative;
+
+		&:before {
+			background: #555A5A;
+			bottom: .25em;
+			content: ' ';
+			display: inline-block;
+			height: .125em;
+			margin: 0 .5em 0 .75em;
+			position: relative;
+			width: 1.5em;
+		}
+	}
+}
+
+
+.socialMedia {
+	float: right;
+
+	a {
+		display: inline-block;
+		font-size: 15px;
+		font-family: 'alternate-gothic-no-3-d';
+		text-transform: uppercase;
+		position: relative;
+
+		&:before {
+	    content: '';
+	    display: block;
+	    height: 2px;
+	    left: -10%;
+	    margin-top: -2px;
+	    position: absolute;
+	    top: 50%;
+	    transition: width 0s ease, background .5s ease;
+	    width: 0;
+		}
+
+		&:after {
+	    background: #fff;
+	    content: '';
+	    display: block;
+	    height: 2px;
+	    margin-top: -2px;
+	    position: absolute;
+	    right: -10%;
+	    top: 50%;
+	    transition: width .5s ease;
+	    width: 0;
+		}
+
+		&:hover:before {
+	    background: #fff;
+	    transition: width .5s ease;
+	    width: 120%;
+		}
+
+		&:hover:after {
+	    background: transparent;
+	    transition: all 0s ease;
+			width: 120%;
+		}
+
+		&:not(:first-child) {
+			margin-left: 2.5rem;
+		}
+	}
+}
